@@ -1,0 +1,161 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .s1{
+            border-radius:50%;
+            background-color:white;
+            position:absolute;
+            height:10%;
+            width:5%;
+            top:0;
+            z-index:500;
+        }
+        .s2 {
+            background-image: url(http://localhost:50796/images/pexels-karen-laårk-boshoff-7488285.jpg);
+            height:100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .s3{
+            background-color:slategray;
+            height:10%;
+            width:100%;
+            top:-1%;
+            left:-0.5%;
+            position:absolute;
+        }
+        .s4{
+            font-style:oblique;
+            color:white;
+            left:90%;
+            top:-1%;
+            position:absolute;
+        }
+        .s5{
+            border-radius:30%;
+            background-color:#CED3E3;
+            position:absolute;
+            height:4%;
+            width:3%;
+            left:30%;
+            top:5%;
+            z-index:500;
+        }
+        .s6{
+            font-style:oblique;
+            color:white;
+            top:-50%;
+            left:17%;
+            position:absolute;
+        }
+        .s7{
+            border-radius:30%;
+            background-color:#CED3E3;
+            position:absolute;
+            height:4%;
+            width:5%;
+            left:34%;
+            top:5%;
+            z-index:500;
+        }
+        .ss{
+            border-radius:60%;
+            height:60px;
+            width:60px;
+            z-index:500;
+            position:absolute;
+        }
+        .ss1{
+            left:6%;
+            position:absolute;
+        }
+        .auto-style6 {
+            width: 62px;
+            height: 62px;
+            border-radius:60%;
+            top:-0.5%;
+            left:1%;
+            z-index:500;
+            position:absolute;
+        }
+        .auto-style7 {
+            left: 0%;
+            top: -1%;
+        }
+        .auto-style8 {
+            height: 26px;
+        }
+    </style>
+    </head>
+<body class="s2">
+    <form id="form1" runat="server">
+        <div >
+
+
+            <table style="width: 100%;">
+                <tr>
+                    <td class="auto-style8">
+                       <!-- <img src="images/Free_Sample_By_Wix.jpg" class="ss"/>-->
+                        <img class="auto-style6" src="images/Free_Sample_By_Wix.jpg" />
+                        <asp:Menu ID="Menu" runat="server" Orientation="Horizontal" OnMenuItemClick="Menu_MenuItemClick" style="top:3%;left:6%;position:absolute;z-index:500;" BackColor="SlateGray" BorderColor="#CCCCFF" Font-Bold="True" Font-Italic="False" Font-Size="15pt" Font-Strikeout="False" Font-Underline="False" ForeColor="White">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/storiesView.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="About Us" Value="AboutUs"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ContactUs.aspx" Text="Contact Us" Value="ContactUs"></asp:MenuItem>
+                                <asp:MenuItem Text="User" Value="User">
+                                    <asp:MenuItem NavigateUrl="~/UserCart.aspx" Text="Reading List" Value="UserReadingList"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/UserWrittenStories.aspx" Text="My stories" Value="UserWrittenStories"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Admin" Value="Admin">
+                                    <asp:MenuItem NavigateUrl="~/UserManagment.aspx" Text="UserManagment" Value="UserManagment"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/StoriesManagment.aspx" Text="StoriesManagment" Value="StoriesManagment"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Masseges.aspx" Text="Messages" Value="Messages"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Log In" Value="LogInOut"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+
+                            </td>
+
+                </tr>
+                <tr>
+                    <td >
+                        <br />
+                        <asp:Label ID="Label2" runat="server" class="s3" CssClass="auto-style7" >
+            <h2 class="s4" >
+                jhgmshld
+            </h2>
+        </asp:Label>
+                        <div class="ss1">
+                            </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+
+                </tr>
+            </table>
+
+
+
+            
+
+        </div>
+
+    </form>
+</body>
+</html>
